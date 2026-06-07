@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a234aed8-011b-4aa3-aeae-74657634a9ef}</ProjectGuid>
-    <RootNamespace>AlgorithmsAndPartners</RootNamespace>
+    <ProjectGuid>{380f3b98-ea03-4b8c-ad5a-0480bd3166f1}</ProjectGuid>
+    <RootNamespace>SortingAlgorithms</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -111,7 +111,6 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)sorting</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,25 +139,20 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BubbleSort.h" />
+    <ClInclude Include="CocktailShakerSort.h" />
+    <ClInclude Include="CountingSort.h" />
+    <ClInclude Include="HeapSort.h" />
+    <ClInclude Include="InsertionSort.h" />
+    <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="RadixSort.h" />
+    <ClInclude Include="SelectionSort.h" />
+    <ClInclude Include="ShellSort.h" />
+    <ClInclude Include="TimSort.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="SortingBenchmark.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sorting\BubbleSort.h" />
-    <ClInclude Include="sorting\CocktailShakerSort.h" />
-    <ClInclude Include="sorting\CountingSort.h" />
-    <ClInclude Include="sorting\HeapSort.h" />
-    <ClInclude Include="sorting\InsertionSort.h" />
-    <ClInclude Include="sorting\MergeSort.h" />
-    <ClInclude Include="sorting\QuickSort.h" />
-    <ClInclude Include="sorting\RadixSort.h" />
-    <ClInclude Include="sorting\SelectionSort.h" />
-    <ClInclude Include="sorting\ShellSort.h" />
-    <ClInclude Include="sorting\TimSort.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".gitignore" />
-    <None Include="LICENSE" />
-    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

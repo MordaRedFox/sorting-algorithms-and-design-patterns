@@ -12,6 +12,7 @@
 #include <ios>
 #include <clocale>
 #include <windows.h>
+#include <utility>
 // Кастомные сортировки
 #include "BubbleSort.h"
 #include "CocktailShakerSort.h"
@@ -24,7 +25,6 @@
 #include "SelectionSort.h"
 #include "ShellSort.h"
 #include "TimSort.h"
-#include <utility>
 
 using DataType = unsigned int;
 using SortingVectorType = std::vector<std::pair<std::string, std::function<
@@ -80,7 +80,7 @@ static std::vector<DataType> generateConstant(size_t size, DataType value = 42)
 /// среднее время в микросекундах
 /// </summary>
 static double benchmark(const std::function<void(std::vector<DataType>&)>& sortFunc,
-    const std::vector<DataType>& original, int runs = 3) 
+    const std::vector<DataType>& original, int runs = 3)
 {
     double totalMicro{ 0.0 };
     for (size_t i{ 0 }; i < runs; i++)
