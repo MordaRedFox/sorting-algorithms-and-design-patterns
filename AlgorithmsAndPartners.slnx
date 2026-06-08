@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Project Path="PatternAbstractFactory/PatternAbstractFactory.vcxproj" Id="d8197599-7665-4611-970e-806369396db3" />
   <Project Path="SortingAlgorithms/SortingAlgorithms.vcxproj" Id="380f3b98-ea03-4b8c-ad5a-0480bd3166f1" />
 </Solution>
