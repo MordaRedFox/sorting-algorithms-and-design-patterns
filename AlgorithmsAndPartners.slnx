@@ -7,5 +7,6 @@
   <Project Path="PatternBuilder/PatternBuilder.vcxproj" Id="ac1ccd6c-0217-4107-88ed-42ebfaa06fb9" />
   <Project Path="PatternFactoryMethod/PatternFactoryMethod.vcxproj" Id="97b7cd6d-8285-47c0-8031-9d6bea6c8b44" />
   <Project Path="PatternPrototype/PatternPrototype.vcxproj" Id="2b06df97-9a73-4154-a09a-3548afefde96" />
+  <Project Path="PatternSingleton/PatternSingleton.vcxproj" Id="5799495d-78f8-467a-9f7c-3dca75ade1b7" />
   <Project Path="SortingAlgorithms/SortingAlgorithms.vcxproj" Id="380f3b98-ea03-4b8c-ad5a-0480bd3166f1" />
 </Solution>
