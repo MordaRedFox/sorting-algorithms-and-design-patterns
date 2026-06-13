@@ -1,4 +1,4 @@
-﻿#pragma comment(linker, "/STACK:16777216")
+#pragma comment(linker, "/STACK:16777216")
 #include <iostream>
 #include <iomanip>
 #include <vector>
@@ -13,6 +13,7 @@
 #include <clocale>
 #include <windows.h>
 #include <utility>
+#include <sstream>
 // Кастомные сортировки
 #include "BubbleSort.h"
 #include "CocktailShakerSort.h"
@@ -31,6 +32,42 @@ using SortingVectorType = std::vector<std::pair<std::string, std::function<
     void(std::vector<DataType>&)>>>;
 using PatternType = std::vector<std::pair<std::string, std::function<
     std::vector<DataType>(size_t)>>>;
+
+/// <summary>
+/// Возвращает количество символов в UTF-8 строке (без учета управляющих
+/// последовательностей, только печатные)
+/// </summary>
+static size_t lengthUTF8(const std::string& inputString)
+{
+    size_t len{ 0 };
+    for (size_t i{ 0 }; i < inputString.size(); i++)
+        if ((inputString[i] & 0xC0) != 0x80) ++len;
+    return len;
+}
+
+/// <summary>
+/// Вывод строки с выравниванием по левому краю (как std::left),
+/// width - ширина колонки в символах
+/// </summary>
+static void printLeft(const std::string& text, size_t width)
+{
+    std::cout << text;
+    size_t printed{ lengthUTF8(text) };
+    if (printed < width)
+        std::cout << std::string(width - printed, ' ');
+}
+
+/// <summary>
+/// Вывод строки с выравниванием по правому краю (как std::right)
+/// width - ширина колонки в символах
+/// </summary>
+static void printRight(const std::string& text, size_t width)
+{
+    size_t printed{ lengthUTF8(text) };
+    if (printed < width)
+        std::cout << std::string(width - printed, ' ');
+    std::cout << text;
+}
 
 /// <summary>
 /// Генерирует случайный массив из неотрицательных чисел
@@ -109,10 +146,9 @@ struct TestCase
 
 int main()
 {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
-    std::setlocale(LC_ALL, "Russian");
-
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
+    std::setlocale(LC_ALL, ".UTF-8");
     std::vector<size_t> sizes{ 500, 1000, 2000 };
     int runsPerBench{ 3 };
     // Универсальные сортировки
@@ -161,31 +197,43 @@ int main()
                 std::cout.flush();
             }
         }
-        std::cout << " выполнено!\n";
+        std::cout << " выполнено!" << std::endl;
     }
-
-    std::cout << "\n\nРезультаты бенчмарка(среднее время в микросекундах, "
-        << runsPerBench << " прогона)\n";
-    std::cout << std::string(75, '=') << "\n";
-    std::cout << std::left << std::setw(22) << "Алгоритм"
-        << std::setw(14) << "Размер"
-        << std::setw(20) << "Паттерн"
-        << std::right << std::setw(16) << "Время (мкс)" << "\n";
-    std::cout << std::string(75, '-') << "\n";
-    for (const auto& res : results)
+    // Вывод результатов
+    const size_t COL_ALGORITHM{ 22 };
+    const size_t COL_SIZE{ 14 };
+    const size_t COL_PATTERN{ 20 };
+    const size_t COL_TIME{ 16 };
+    std::cout << std::endl << std::endl;
+    std::cout << "Результаты бенчмарка (среднее время в микросекундах, "
+        << runsPerBench << " прогона)" << std::endl;
+    std::cout << std::string(75, '=') << std::endl;
+    // Заголовок таблицы
+    printLeft("Алгоритм", COL_ALGORITHM);
+    printLeft("Размер", COL_SIZE);
+    printLeft("Паттерн", COL_PATTERN);
+    printRight("Время (мкс)", COL_TIME);
+    std::cout << std::endl;
+    std::cout << std::string(75, '-') << std::endl;
+    // Строки данных
+    for (const auto& result : results)
     {
-        std::cout << std::left << std::setw(22) << res.sortName
-            << std::setw(14) << res.size
-            << std::setw(20) << res.pattern
-            << std::right << std::fixed << std::setprecision(2)
-            << std::setw(16) << res.timeMicro << "\n";
+        printLeft(result.sortName, COL_ALGORITHM);
+        printLeft(std::to_string(result.size), COL_SIZE);
+        printLeft(result.pattern, COL_PATTERN);
+        std::ostringstream oss;
+        oss << std::fixed << std::setprecision(2) << result.timeMicro;
+        printRight(oss.str(), COL_TIME);
+        std::cout << std::endl;
     }
-    std::cout << "\n\nСводка по самым быстрым универсальным алгоритмам\n";
-    std::cout << std::string(75, '=') << "\n";
+    // Сводка по самым быстрым универсальным алгоритмам
+    std::cout << std::endl << std::endl;
+    std::cout << "Сводка по самым быстрым универсальным алгоритмам" << std::endl;
+    std::cout << std::string(75, '=') << std::endl;
     for (auto& [patternName, genFunc] : generators)
     {
-        std::cout << "\nПаттерн: " << patternName << "\n";
-        std::cout << std::string(75, '-') << "\n";
+        std::cout << std::endl << "Паттерн: " << patternName << std::endl;
+        std::cout << std::string(75, '-') << std::endl;
         for (size_t n : sizes)
         {
             double bestTime{ 1e18 };
@@ -200,12 +248,11 @@ int main()
                     bestName = sortName;
                 }
             }
-            std::cout << "  Размер " << std::setw(6) << n << " элементов "
-                << std::right << std::setw(10) << bestName
-                << std::right << " (" << std::fixed << std::setprecision(2)
-                << bestTime << " мкс)\n";
+            std::cout << "  Размер: " << std::setw(6) << n << " элементов → "
+                << std::left << std::setw(16) << bestName << " (" << std::fixed
+                << std::setprecision(2) << bestTime << " мкс)" << std::endl;
         }
-        std::cout << "\n";
+        std::cout << std::endl;
     }
     return 0;
 }

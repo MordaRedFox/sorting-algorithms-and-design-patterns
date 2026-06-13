@@ -1,5 +1,8 @@
 #pragma once
 
+/// <summary>
+/// Класс, представляющий абстрактный меч
+/// </summary>
 class AbstractSword
 {
 public:

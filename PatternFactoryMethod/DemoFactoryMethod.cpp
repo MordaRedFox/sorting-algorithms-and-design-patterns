@@ -11,7 +11,8 @@ int main()
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
-    std::cout << "Демонстрация фабричного метода" << std::endl << std::endl;
+    std::cout << "Демонстрация паттерна \"Фабричный метод\"" << std::endl
+        << std::endl;
     // Использование золотого меча
     std::unique_ptr<SwordCreator> creator1{ std::make_unique<GoldenSwordCreator>() };
     creator1->createAndUseSword();

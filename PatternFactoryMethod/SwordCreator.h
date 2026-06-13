@@ -2,6 +2,9 @@
 #include <memory>
 #include "AbstractSword.h"
 
+/// <summary>
+/// Абстрактный создатель мечей с фабричным методом
+/// </summary>
 class SwordCreator
 {
 public:

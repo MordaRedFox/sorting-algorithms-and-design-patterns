@@ -1,10 +1,7 @@
 #include "Director.h"
 #include "AbstractHouseBuilder.h"
 
-Director::Director()
-{
-    builder = nullptr;
-}
+Director::Director() : builder(nullptr) {}
 
 void Director::setBuilder(AbstractHouseBuilder* builder)
 {

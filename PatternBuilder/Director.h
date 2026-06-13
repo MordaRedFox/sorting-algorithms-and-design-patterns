@@ -8,6 +8,11 @@ class Director
 {
 public:
     Director();
+    ~Director() = default;
+    Director(const Director&) = delete;
+    Director& operator=(const Director&) = delete;
+    Director(Director&&) = default;
+    Director& operator=(Director&&) = default;
 
     /// <summary>
     /// Устанавливает строителя, которым будет управлять директор

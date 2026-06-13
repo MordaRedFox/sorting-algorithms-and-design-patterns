@@ -1,6 +1,9 @@
 #pragma once
 #include "AbstractSword.h"
 
+/// <summary>
+/// Класс, представляющий конкретный железный меч
+/// </summary>
 class IronSword : public AbstractSword
 {
 public:

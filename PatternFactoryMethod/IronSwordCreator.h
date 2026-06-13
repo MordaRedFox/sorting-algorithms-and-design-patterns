@@ -3,6 +3,9 @@
 #include "SwordCreator.h"
 #include "AbstractSword.h"
 
+/// <summary>
+/// Конкретный создатель железных мечей
+/// </summary>
 class IronSwordCreator : public SwordCreator
 {
 protected:

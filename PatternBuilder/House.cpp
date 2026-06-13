@@ -2,15 +2,14 @@
 #include <string>
 #include "House.h"
 
-House::House()
-{
-	this->walls = "";
-	this->doors = 0;
-	this->windows = 0;
-	this->roof = "";
-	this->garage = false;
-	this->swimmingPool = false;
-}
+House::House() :
+	walls(""),
+	doors(0),
+	windows(0),
+	roof(""),
+	garage(false),
+	swimmingPool(false)
+{}
 
 void House::setWalls(const std::string& walls)
 {

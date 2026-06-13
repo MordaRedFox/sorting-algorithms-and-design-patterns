@@ -26,12 +26,12 @@ int main()
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
-    std::cout << "Демонстрация абстрактной фабрики" << std::endl;
+    std::cout << "Демонстрация паттерна \"Абстрактная фабрика\"" << std::endl;
     MacFactoryOS macFactory;
-    std::cout << "\n--- Фабрика Mac OS ---" << std::endl;
+    std::cout << std::endl << "--- Фабрика Mac OS ---" << std::endl;
     createAndUseUI(macFactory);
     WinFactoryOS winFactory;
-    std::cout << "\n--- Фабрика Windows ---" << std::endl;
+    std::cout << std::endl << "--- Фабрика Windows ---" << std::endl;
     createAndUseUI(winFactory);
     return 0;
 }
