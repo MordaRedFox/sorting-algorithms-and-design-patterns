@@ -4,6 +4,7 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="PatternAbstractFactory/PatternAbstractFactory.vcxproj" Id="d8197599-7665-4611-970e-806369396db3" />
+  <Project Path="PatternAdapter/PatternAdapter.vcxproj" Id="6cff4998-2ffd-4416-83fb-96c5df92cb65" />
   <Project Path="PatternBuilder/PatternBuilder.vcxproj" Id="ac1ccd6c-0217-4107-88ed-42ebfaa06fb9" />
   <Project Path="PatternFactoryMethod/PatternFactoryMethod.vcxproj" Id="97b7cd6d-8285-47c0-8031-9d6bea6c8b44" />
   <Project Path="PatternPrototype/PatternPrototype.vcxproj" Id="2b06df97-9a73-4154-a09a-3548afefde96" />
