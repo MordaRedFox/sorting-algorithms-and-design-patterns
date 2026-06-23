@@ -1,6 +1,6 @@
 #include <string>
 #include <memory>
-#include "CarPrototype.h"
+#include "ICarPrototype.h"
 #include "MercedesGelandewagen.h"
 
 MercedesGelandewagen::MercedesGelandewagen() :
@@ -13,7 +13,7 @@ MercedesGelandewagen::MercedesGelandewagen() :
     price(45000)
 {}
 
-std::unique_ptr<CarPrototype> MercedesGelandewagen::clone() const
+std::unique_ptr<ICarPrototype> MercedesGelandewagen::clone() const
 {
     return std::make_unique<MercedesGelandewagen>(*this);
 }

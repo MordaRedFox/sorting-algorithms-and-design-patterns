@@ -1,9 +1,9 @@
 #include "Director.h"
-#include "AbstractHouseBuilder.h"
+#include "IHouseBuilder.h"
 
 Director::Director() : builder(nullptr) {}
 
-void Director::setBuilder(AbstractHouseBuilder* builder)
+void Director::setBuilder(IHouseBuilder* builder)
 {
     this->builder = builder;
 }

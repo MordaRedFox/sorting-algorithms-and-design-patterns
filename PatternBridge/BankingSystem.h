@@ -1,12 +1,12 @@
 #pragma once
-#include "IAbstractionBankingSystem.h"
+#include "IBankingSystem.h"
 #include "IBankingSystemImpl.h"
 #include <memory>
 
 /// <summary>
 /// Класс, реализующий необходимый интерфейс
 /// </summary>
-class BankingSystem : public IAbstractionBankingSystem
+class BankingSystem : public IBankingSystem
 {
 public:
     explicit BankingSystem(std::unique_ptr<IBankingSystemImpl> impl);

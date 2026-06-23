@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AdapteeInterface.cpp">
+    <ClCompile Include="Adaptee.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="Adapter.cpp">
@@ -26,10 +26,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TargetInterface.h">
+    <ClInclude Include="ITarget.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="AdapteeInterface.h">
+    <ClInclude Include="Adaptee.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Adapter.h">

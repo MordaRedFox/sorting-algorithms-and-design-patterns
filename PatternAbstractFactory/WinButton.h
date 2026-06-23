@@ -1,10 +1,10 @@
 #pragma once
-#include "AbstractButton.h"
+#include "IButton.h"
 
 /// <summary>
 /// Конкретный класс (продукт фабрики) для кнопки Windows
 /// </summary>
-class WinButton : public AbstractButton
+class WinButton : public IButton
 {
 public:
     /// <summary>

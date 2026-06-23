@@ -139,14 +139,14 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="AdapteeInterface.cpp" />
+    <ClCompile Include="Adaptee.cpp" />
     <ClCompile Include="Adapter.cpp" />
     <ClCompile Include="DemoAdapter.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AdapteeInterface.h" />
+    <ClInclude Include="Adaptee.h" />
     <ClInclude Include="Adapter.h" />
-    <ClInclude Include="TargetInterface.h" />
+    <ClInclude Include="ITarget.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

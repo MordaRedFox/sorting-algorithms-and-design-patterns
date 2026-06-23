@@ -24,7 +24,7 @@
     <ClInclude Include="TbankBankingSystemImpl.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="IAbstractionBankingSystem.h">
+    <ClInclude Include="IBankingSystem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="BankingSystem.h">

@@ -1,17 +1,17 @@
 #pragma once
 
 /// <summary>
-/// Интерфейс абстракции
+/// Интерфейс абстрактной банковской системы
 /// </summary>
-class IAbstractionBankingSystem
+class IBankingSystem
 {
 public:
-	IAbstractionBankingSystem() = default;
-	virtual ~IAbstractionBankingSystem() = default;
-	IAbstractionBankingSystem(const IAbstractionBankingSystem&) = delete;
-	IAbstractionBankingSystem& operator=(const IAbstractionBankingSystem&) = delete;
-	IAbstractionBankingSystem(IAbstractionBankingSystem&&) = default;
-	IAbstractionBankingSystem& operator=(IAbstractionBankingSystem&&) = default;
+	IBankingSystem() = default;
+	virtual ~IBankingSystem() = default;
+	IBankingSystem(const IBankingSystem&) = delete;
+	IBankingSystem& operator=(const IBankingSystem&) = delete;
+	IBankingSystem(IBankingSystem&&) = default;
+	IBankingSystem& operator=(IBankingSystem&&) = default;
 
 	/// <summary>
 	/// Абстрактная операция интерфейса для начисления денег на счет

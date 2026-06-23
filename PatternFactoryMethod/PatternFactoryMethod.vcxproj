@@ -147,7 +147,7 @@
     <ClCompile Include="SwordCreator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractSword.h" />
+    <ClInclude Include="ISword.h" />
     <ClInclude Include="GoldenSword.h" />
     <ClInclude Include="GoldenSwordCreator.h" />
     <ClInclude Include="IronSword.h" />

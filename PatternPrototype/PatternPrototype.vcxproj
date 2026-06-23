@@ -144,7 +144,7 @@
     <ClCompile Include="ToyotaCamry.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CarPrototype.h" />
+    <ClInclude Include="ICarPrototype.h" />
     <ClInclude Include="MercedesGelandewagen.h" />
     <ClInclude Include="ToyotaCamry.h" />
   </ItemGroup>

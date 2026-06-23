@@ -1,10 +1,10 @@
 #pragma once
-#include "AbstractTextField.h"
+#include "ITextField.h"
 
 /// <summary>
 /// Конкретный класс (продукт фабрики) для текстового поля Mac
 /// </summary>
-class MacTextField : public AbstractTextField
+class MacTextField : public ITextField
 {
 public:
 	/// <summary>

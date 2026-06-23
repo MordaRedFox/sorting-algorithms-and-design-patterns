@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BankingSystem.h" />
-    <ClInclude Include="IAbstractionBankingSystem.h" />
+    <ClInclude Include="IBankingSystem.h" />
     <ClInclude Include="IBankingSystemImpl.h" />
     <ClInclude Include="SberbankBankingSystemImpl.h" />
     <ClInclude Include="TbankBankingSystemImpl.h" />

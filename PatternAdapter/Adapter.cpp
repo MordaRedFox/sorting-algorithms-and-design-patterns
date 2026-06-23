@@ -1,8 +1,8 @@
 #include <memory>
 #include "Adapter.h"
-#include "AdapteeInterface.h"
+#include "Adaptee.h"
 
-Adapter::Adapter() : adaptee(std::make_unique<AdapteeInterface>()) {}
+Adapter::Adapter() : adaptee(std::make_unique<Adaptee>()) {}
 
 void Adapter::doSomeJob1(int repeatCount)
 {

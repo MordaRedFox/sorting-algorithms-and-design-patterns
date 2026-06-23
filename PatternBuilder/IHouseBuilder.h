@@ -5,15 +5,15 @@
 /// <summary>
 /// Интерфейс строителя (паттерн проектирования) дома
 /// </summary>
-class AbstractHouseBuilder
+class IHouseBuilder
 {
 public:
-	AbstractHouseBuilder() = default;
-	virtual ~AbstractHouseBuilder() = default;
-	AbstractHouseBuilder(const AbstractHouseBuilder&) = delete;
-	AbstractHouseBuilder& operator=(const AbstractHouseBuilder&) = delete;
-	AbstractHouseBuilder(AbstractHouseBuilder&&) = default;
-	AbstractHouseBuilder& operator=(AbstractHouseBuilder&&) = default;
+	IHouseBuilder() = default;
+	virtual ~IHouseBuilder() = default;
+	IHouseBuilder(const IHouseBuilder&) = delete;
+	IHouseBuilder& operator=(const IHouseBuilder&) = delete;
+	IHouseBuilder(IHouseBuilder&&) = default;
+	IHouseBuilder& operator=(IHouseBuilder&&) = default;
 
 	/// <summary>
 	/// Абстрактный метод для построения стен в доме

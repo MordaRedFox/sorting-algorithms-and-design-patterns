@@ -1,9 +1,9 @@
 #include <memory>
 #include "SwordCreator.h"
-#include "AbstractSword.h"
+#include "ISword.h"
 
 void SwordCreator::createAndUseSword()
 {
-	std::unique_ptr<AbstractSword> sword{ factoryMethod() };
+	std::unique_ptr<ISword> sword{ factoryMethod() };
 	sword->use();
 }

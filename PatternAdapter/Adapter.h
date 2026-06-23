@@ -1,12 +1,12 @@
 #pragma once
 #include <memory>
-#include "TargetInterface.h"
-#include "AdapteeInterface.h"
+#include "ITarget.h"
+#include "Adaptee.h"
 
 /// <summary>
-/// Адаптер, преобразующий интерфейс AdapteeInterface к TargetInterface
+/// Адаптер, преобразующий интерфейс класса Adaptee к ITarget
 /// </summary>
-class Adapter : public TargetInterface
+class Adapter : public ITarget
 {
 public:
     Adapter();
@@ -32,5 +32,5 @@ public:
     void doSomeJob3() override final;
 
 private:
-    std::unique_ptr<AdapteeInterface> adaptee;
+    std::unique_ptr<Adaptee> adaptee;
 };

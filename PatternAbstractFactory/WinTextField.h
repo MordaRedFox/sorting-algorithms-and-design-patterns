@@ -1,10 +1,10 @@
 #pragma once
-#include "AbstractTextField.h"
+#include "ITextField.h"
 
 /// <summary>
 /// Конкретный класс (продукт фабрики) для текстового поля Windows
 /// </summary>
-class WinTextField : public AbstractTextField
+class WinTextField : public ITextField
 {
 public:
 	/// <summary>

@@ -1,12 +1,12 @@
 #pragma once
 #include <string>
 #include <memory>
-#include "CarPrototype.h"
+#include "ICarPrototype.h"
 
 /// <summary>
 /// Конкретный прототип - автомобиль Toyota Camry
 /// </summary>
-class ToyotaCamry : public CarPrototype
+class ToyotaCamry : public ICarPrototype
 {
 public:
     ToyotaCamry();
@@ -19,7 +19,7 @@ public:
     /// <summary>
     /// Копирует прототип автомобиля Toyota Camry
     /// </summary>
-    std::unique_ptr<CarPrototype> clone() const override final;
+    std::unique_ptr<ICarPrototype> clone() const override final;
 
     // Геттеры
     std::string getBrand() const override final;

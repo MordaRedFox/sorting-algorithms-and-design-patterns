@@ -146,7 +146,7 @@
     <ClCompile Include="LuxuryHouseBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractHouseBuilder.h" />
+    <ClInclude Include="IHouseBuilder.h" />
     <ClInclude Include="BrickHouseBuilder.h" />
     <ClInclude Include="Director.h" />
     <ClInclude Include="House.h" />

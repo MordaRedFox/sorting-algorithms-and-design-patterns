@@ -1,12 +1,12 @@
 #pragma once
 #include <memory>
-#include "AbstractHouseBuilder.h"
+#include "IHouseBuilder.h"
 #include "House.h"
 
 /// <summary>
 /// Конкретный строитель - строитель элитного дома
 /// </summary>
-class LuxuryHouseBuilder : public AbstractHouseBuilder
+class LuxuryHouseBuilder : public IHouseBuilder
 {
 public:
     LuxuryHouseBuilder();

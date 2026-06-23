@@ -1,5 +1,5 @@
 #pragma once
-#include "AbstractHouseBuilder.h"
+#include "IHouseBuilder.h"
 
 /// <summary>
 /// Директор управляет процессом строительства, используя конкретного строителя
@@ -17,7 +17,7 @@ public:
     /// <summary>
     /// Устанавливает строителя, которым будет управлять директор
     /// </summary>
-    void setBuilder(AbstractHouseBuilder* builder);
+    void setBuilder(IHouseBuilder* builder);
 
     /// <summary>
     /// Строит базовый дом (только стены, двери, окна, крыша)
@@ -40,5 +40,5 @@ public:
     void constructFullHouse();
 
 private:
-    AbstractHouseBuilder* builder;
+    IHouseBuilder* builder;
 };

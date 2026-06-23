@@ -1,22 +1,22 @@
 #pragma once
 #include <memory>
-#include "AbstractFactoryOS.h"
-#include "AbstractButton.h"
-#include "AbstractTextField.h"
+#include "IFactoryOS.h"
+#include "IButton.h"
+#include "ITextField.h"
 
 /// <summary>
-/// Конкретная фабрика - фабрика продуктов для продуктов Windows
+/// Конкретная фабрика - фабрика продуктов для Windows
 /// </summary>
-class WinFactoryOS : public AbstractFactoryOS
+class WinFactoryOS : public IFactoryOS
 {
 public:
     /// <summary>
     /// Создание кнопки Windows
     /// </summary>
-    std::unique_ptr<AbstractButton> createButton() override final;
+    std::unique_ptr<IButton> createButton() override final;
 
     /// <summary>
     /// Создание текстового поля Windows
     /// </summary>
-    std::unique_ptr<AbstractTextField> createTextField() override final;
+    std::unique_ptr<ITextField> createTextField() override final;
 };

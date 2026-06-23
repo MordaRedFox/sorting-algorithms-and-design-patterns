@@ -1,9 +1,9 @@
 #include <memory>
 #include "IronSwordCreator.h"
 #include "IronSword.h"
-#include "AbstractSword.h"
+#include "ISword.h"
 
-std::unique_ptr<AbstractSword> IronSwordCreator::factoryMethod()
+std::unique_ptr<ISword> IronSwordCreator::factoryMethod()
 {
 	return std::make_unique<IronSword>();
 }

@@ -26,7 +26,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CarPrototype.h">
+    <ClInclude Include="ICarPrototype.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="MercedesGelandewagen.h">

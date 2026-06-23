@@ -3,15 +3,15 @@
 /// <summary>
 /// Целевой интерфейс, который ожидает клиентский код
 /// </summary>
-class TargetInterface
+class ITarget
 {
 public:
-    TargetInterface() = default;
-    virtual ~TargetInterface() = default;
-    TargetInterface(const TargetInterface&) = default;
-    TargetInterface& operator=(const TargetInterface&) = default;
-    TargetInterface(TargetInterface&&) = default;
-    TargetInterface& operator=(TargetInterface&&) = default;
+    ITarget() = default;
+    virtual ~ITarget() = default;
+    ITarget(const ITarget&) = default;
+    ITarget& operator=(const ITarget&) = default;
+    ITarget(ITarget&&) = default;
+    ITarget& operator=(ITarget&&) = default;
 
     /// <summary>
     /// Метод 1, который делает полезную работу

@@ -148,9 +148,9 @@
     <ClCompile Include="WinTextField.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractButton.h" />
-    <ClInclude Include="AbstractFactoryOS.h" />
-    <ClInclude Include="AbstractTextField.h" />
+    <ClInclude Include="IButton.h" />
+    <ClInclude Include="IFactoryOS.h" />
+    <ClInclude Include="ITextField.h" />
     <ClInclude Include="MacButton.h" />
     <ClInclude Include="MacFactoryOS.h" />
     <ClInclude Include="MacTextField.h" />

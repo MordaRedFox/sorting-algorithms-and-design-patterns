@@ -3,7 +3,7 @@
 /// <summary>
 /// Адаптируемый класс с несовместимым интерфейсом
 /// </summary>
-class AdapteeInterface
+class Adaptee
 {
 public:
     /// <summary>

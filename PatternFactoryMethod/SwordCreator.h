@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include "AbstractSword.h"
+#include "ISword.h"
 
 /// <summary>
 /// Абстрактный создатель мечей с фабричным методом
@@ -16,7 +16,7 @@ public:
     SwordCreator& operator=(SwordCreator&&) = default;
 
     /// <summary>
-    /// Виртуальный метод для создания и использования меча
+    /// Метод для создания и использования меча
     /// </summary>
     void createAndUseSword();
 
@@ -24,5 +24,5 @@ protected:
 	/// <summary>
 	/// Виртуальный фабричный метод для создания продукта
 	/// </summary>
-	virtual std::unique_ptr<AbstractSword> factoryMethod() = 0;
+	virtual std::unique_ptr<ISword> factoryMethod() = 0;
 };

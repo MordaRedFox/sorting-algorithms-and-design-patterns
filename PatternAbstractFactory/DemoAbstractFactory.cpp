@@ -2,7 +2,7 @@
 #include <memory>
 #include <windows.h>
 #include <clocale>
-#include "AbstractFactoryOS.h"
+#include "IFactoryOS.h"
 #include "MacFactoryOS.h"
 #include "WinFactoryOS.h"
 
@@ -11,7 +11,7 @@
 /// текстового поля. Конкретный тип фабрики (Mac или Windows) передается во
 /// время выполнения
 /// </summary>
-static void createAndUseUI(AbstractFactoryOS& factory)
+static void createAndUseUI(IFactoryOS& factory)
 {
     auto button{ factory.createButton() };
     auto textField{ factory.createTextField() };

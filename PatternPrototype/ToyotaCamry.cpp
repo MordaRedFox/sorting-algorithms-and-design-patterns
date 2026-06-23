@@ -1,6 +1,6 @@
 #include <string>
 #include <memory>
-#include "CarPrototype.h"
+#include "ICarPrototype.h"
 #include "ToyotaCamry.h"
 
 ToyotaCamry::ToyotaCamry():
@@ -13,7 +13,7 @@ ToyotaCamry::ToyotaCamry():
     price(28000)
 {}
 
-std::unique_ptr<CarPrototype> ToyotaCamry::clone() const
+std::unique_ptr<ICarPrototype> ToyotaCamry::clone() const
 {
     return std::make_unique<ToyotaCamry>(*this);
 }

@@ -3,22 +3,22 @@
 #include <string>
 
 /// <summary>
-/// Абстрактный прототип автомобиля
+/// Интерфейс, определяющий прототип автомобиля
 /// </summary>
-class CarPrototype
+class ICarPrototype
 {
 public:
-    CarPrototype() = default;
-    virtual ~CarPrototype() = default;
-    CarPrototype(const CarPrototype&) = default;
-    CarPrototype& operator=(const CarPrototype&) = default;
-    CarPrototype(CarPrototype&&) = default;
-    CarPrototype& operator=(CarPrototype&&) = default;
+    ICarPrototype() = default;
+    virtual ~ICarPrototype() = default;
+    ICarPrototype(const ICarPrototype&) = default;
+    ICarPrototype& operator=(const ICarPrototype&) = default;
+    ICarPrototype(ICarPrototype&&) = default;
+    ICarPrototype& operator=(ICarPrototype&&) = default;
 
     /// <summary>
     /// Абстрактный метод для копирования
     /// </summary>
-    virtual std::unique_ptr<CarPrototype> clone() const = 0;
+    virtual std::unique_ptr<ICarPrototype> clone() const = 0;
     
     // Геттеры
     virtual std::string getBrand() const = 0;

@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 #include "SwordCreator.h"
-#include "AbstractSword.h"
+#include "ISword.h"
 
 /// <summary>
 /// Конкретный создатель железных мечей
@@ -12,5 +12,5 @@ protected:
 	/// <summary>
 	/// Фабричный метод, возвращает указатель базового типа на железный меч
 	/// </summary>
-	std::unique_ptr<AbstractSword> factoryMethod() override final;
+	std::unique_ptr<ISword> factoryMethod() override final;
 };

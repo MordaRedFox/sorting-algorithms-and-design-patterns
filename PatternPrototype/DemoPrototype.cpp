@@ -3,14 +3,14 @@
 #include <string>
 #include <windows.h>
 #include <clocale>
-#include "CarPrototype.h"
+#include "ICarPrototype.h"
 #include "MercedesGelandewagen.h"
 #include "ToyotaCamry.h"
 
 /// <summary>
 /// Выводит информацию о автомобиле в удобном формате
 /// </summary>
-static void printCar(const CarPrototype& car, const std::string& label)
+static void printCar(const ICarPrototype& car, const std::string& label)
 {
     std::cout << label << ": " << car.getBrand() << " " << car.getModel()
         << ", цвет: " << car.getColor() << ", цена: " << car.getPrice()
@@ -24,9 +24,9 @@ int main()
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Прототип\"" << std::endl;
     // Создание оригинальных прототипов и вывод информации о них
-    std::unique_ptr<CarPrototype> mercedesProto{
+    std::unique_ptr<ICarPrototype> mercedesProto{
         std::make_unique<MercedesGelandewagen>() };
-    std::unique_ptr<CarPrototype> toyotaProto{
+    std::unique_ptr<ICarPrototype> toyotaProto{
         std::make_unique<ToyotaCamry>() };
     std::cout << std::endl << "Оригинальные прототипы" << std::endl;
     printCar(*mercedesProto, "Mercedes Gelandewagen");

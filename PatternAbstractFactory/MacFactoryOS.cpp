@@ -2,15 +2,15 @@
 #include "MacFactoryOS.h"
 #include "MacButton.h"
 #include "MacTextField.h"
-#include "AbstractButton.h"
-#include "AbstractTextField.h"
+#include "IButton.h"
+#include "ITextField.h"
 
-std::unique_ptr<AbstractButton> MacFactoryOS::createButton()
+std::unique_ptr<IButton> MacFactoryOS::createButton()
 {
 	return std::make_unique<MacButton>();
 }
 
-std::unique_ptr<AbstractTextField> MacFactoryOS::createTextField()
+std::unique_ptr<ITextField> MacFactoryOS::createTextField()
 {
 	return std::make_unique<MacTextField>();
 }

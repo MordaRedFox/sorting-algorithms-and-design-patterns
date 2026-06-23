@@ -1,22 +1,22 @@
 #pragma once
 #include <memory>
-#include "AbstractFactoryOS.h"
-#include "AbstractButton.h"
-#include "AbstractTextField.h"
+#include "IFactoryOS.h"
+#include "IButton.h"
+#include "ITextField.h"
 
 /// <summary>
 /// Конкретная фабрика - фабрика продуктов для Mac
 /// </summary>
-class MacFactoryOS : public AbstractFactoryOS
+class MacFactoryOS : public IFactoryOS
 {
 public:
     /// <summary>
     /// Создание кнопки Mac
     /// </summary>
-    std::unique_ptr<AbstractButton> createButton() override final;
+    std::unique_ptr<IButton> createButton() override final;
 
     /// <summary>
     /// Создание текстового поля Mac
     /// </summary>
-    std::unique_ptr<AbstractTextField> createTextField() override final;
+    std::unique_ptr<ITextField> createTextField() override final;
 };

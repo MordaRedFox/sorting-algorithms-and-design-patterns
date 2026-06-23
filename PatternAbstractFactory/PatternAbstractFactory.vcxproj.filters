@@ -38,13 +38,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AbstractButton.h">
+    <ClInclude Include="IButton.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractFactoryOS.h">
+    <ClInclude Include="IFactoryOS.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="AbstractTextField.h">
+    <ClInclude Include="ITextField.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="MacButton.h">

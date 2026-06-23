@@ -1,10 +1,10 @@
 #pragma once
-#include "AbstractSword.h"
+#include "ISword.h"
 
 /// <summary>
 /// Класс, представляющий конкретный железный меч
 /// </summary>
-class IronSword : public AbstractSword
+class IronSword : public ISword
 {
 public:
 	/// <summary>
