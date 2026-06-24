@@ -1,14 +1,11 @@
 #include <iostream>
 #include <memory>
-#include <windows.h>
 #include <clocale>
 #include "Adapter.h"
 #include "ITarget.h"
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Адаптер\"" << std::endl << std::endl;
     // Работа с нужным классом через адаптер для сохранения целевого интерфейса

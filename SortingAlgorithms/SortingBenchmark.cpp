@@ -11,7 +11,6 @@
 #include <ratio>
 #include <ios>
 #include <clocale>
-#include <windows.h>
 #include <utility>
 #include <sstream>
 // Кастомные сортировки
@@ -146,8 +145,6 @@ struct TestCase
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::vector<size_t> sizes{ 500, 1000, 2000 };
     int runsPerBench{ 3 };
@@ -248,7 +245,7 @@ int main()
                     bestName = sortName;
                 }
             }
-            std::cout << "  Размер: " << std::setw(6) << n << " элементов → "
+            std::cout << "  Размер: " << std::setw(6) << n << " элементов "
                 << std::left << std::setw(16) << bestName << " (" << std::fixed
                 << std::setprecision(2) << bestTime << " мкс)" << std::endl;
         }

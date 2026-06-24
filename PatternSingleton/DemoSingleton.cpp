@@ -1,12 +1,9 @@
 #include <iostream>
-#include <windows.h>
 #include <clocale>
 #include "DataBaseConfig.h"
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Одиночка\"" << std::endl << std::endl;
     std::cout <<"Создание единственного экземпляра базы данных и подключение к нему:"

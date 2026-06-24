@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <windows.h>
 #include <clocale>
 #include "SwordCreator.h"
 #include "GoldenSwordCreator.h"
@@ -8,8 +7,6 @@
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Фабричный метод\"" << std::endl
         << std::endl;

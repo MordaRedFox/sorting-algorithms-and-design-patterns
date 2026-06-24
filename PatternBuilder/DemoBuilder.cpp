@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <windows.h>
 #include <clocale>
 #include "Director.h"
 #include "BrickHouseBuilder.h"
@@ -9,8 +8,6 @@
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Строитель\"" << std::endl;
     // Строительство кирпичного дома с гаражом через Director

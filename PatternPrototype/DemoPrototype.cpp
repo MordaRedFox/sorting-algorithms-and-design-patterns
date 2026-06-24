@@ -1,7 +1,6 @@
 #include <iostream>
 #include <memory>
 #include <string>
-#include <windows.h>
 #include <clocale>
 #include "ICarPrototype.h"
 #include "MercedesGelandewagen.h"
@@ -19,8 +18,6 @@ static void printCar(const ICarPrototype& car, const std::string& label)
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Прототип\"" << std::endl;
     // Создание оригинальных прототипов и вывод информации о них

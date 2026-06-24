@@ -1,7 +1,6 @@
 #include <iostream>
 #include <memory>
 #include <utility>
-#include <windows.h>
 #include <clocale>
 #include "BankingSystem.h"
 #include "SberbankBankingSystemImpl.h"
@@ -9,8 +8,6 @@
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Мост\"" << std::endl << std::endl;
     // Работа со Сбербанком

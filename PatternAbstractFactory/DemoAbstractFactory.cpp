@@ -1,6 +1,5 @@
 #include <iostream>
 #include <memory>
-#include <windows.h>
 #include <clocale>
 #include "IFactoryOS.h"
 #include "MacFactoryOS.h"
@@ -23,8 +22,6 @@ static void createAndUseUI(IFactoryOS& factory)
 
 int main()
 {
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
     std::setlocale(LC_ALL, ".UTF-8");
     std::cout << "Демонстрация паттерна \"Абстрактная фабрика\"" << std::endl;
     MacFactoryOS macFactory;
