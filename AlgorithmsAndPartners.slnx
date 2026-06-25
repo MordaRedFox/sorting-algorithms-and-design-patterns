@@ -8,6 +8,7 @@
   <Project Path="PatternBridge/PatternBridge.vcxproj" Id="920464bd-14af-4265-a241-5d30ef2c59e3" />
   <Project Path="PatternBuilder/PatternBuilder.vcxproj" Id="ac1ccd6c-0217-4107-88ed-42ebfaa06fb9" />
   <Project Path="PatternComposite/PatternComposite.vcxproj" Id="bedd9d43-dd83-404b-b3f4-d79f41bce5b6" />
+  <Project Path="PatternDecorator/PatternDecorator.vcxproj" Id="e4a6eacc-af0b-45c7-bdaf-bcf45615dc65" />
   <Project Path="PatternFactoryMethod/PatternFactoryMethod.vcxproj" Id="97b7cd6d-8285-47c0-8031-9d6bea6c8b44" />
   <Project Path="PatternPrototype/PatternPrototype.vcxproj" Id="2b06df97-9a73-4154-a09a-3548afefde96" />
   <Project Path="PatternSingleton/PatternSingleton.vcxproj" Id="5799495d-78f8-467a-9f7c-3dca75ade1b7" />
