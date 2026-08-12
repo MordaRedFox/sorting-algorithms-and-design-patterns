@@ -15,6 +15,7 @@
   <Project Path="PatternFlyweight/PatternFlyweight.vcxproj" Id="187c7549-073a-4974-9a70-6ab58db937db" />
   <Project Path="PatternInterpreter/PatternInterpreter.vcxproj" Id="fc21e0af-cb12-44cb-92f2-1fff1ac51c4a" />
   <Project Path="PatternIterator/PatternIterator.vcxproj" Id="adb5fed3-1b8a-4f42-8df5-5b37c6cf6c36" />
+  <Project Path="PatternMediator/PatternMediator.vcxproj" Id="7caee9fb-dff5-44ed-9e3a-8da11612c188" />
   <Project Path="PatternPrototype/PatternPrototype.vcxproj" Id="2b06df97-9a73-4154-a09a-3548afefde96" />
   <Project Path="PatternProxy/PatternProxy.vcxproj" Id="8cd0c22d-120c-4e9d-80c1-2f2795aa933d" />
   <Project Path="PatternSingleton/PatternSingleton.vcxproj" Id="5799495d-78f8-467a-9f7c-3dca75ade1b7" />
