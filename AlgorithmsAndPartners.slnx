@@ -22,5 +22,6 @@
   <Project Path="PatternProxy/PatternProxy.vcxproj" Id="8cd0c22d-120c-4e9d-80c1-2f2795aa933d" />
   <Project Path="PatternSingleton/PatternSingleton.vcxproj" Id="5799495d-78f8-467a-9f7c-3dca75ade1b7" />
   <Project Path="PatternState/PatternState.vcxproj" Id="d78c6a30-f5e7-4258-84d8-a91fee8a3534" />
+  <Project Path="PatternStrategy/PatternStrategy.vcxproj" Id="b342fffd-e4ae-402e-8dc2-bf44ac6ce5fe" />
   <Project Path="SortingAlgorithms/SortingAlgorithms.vcxproj" Id="380f3b98-ea03-4b8c-ad5a-0480bd3166f1" />
 </Solution>
