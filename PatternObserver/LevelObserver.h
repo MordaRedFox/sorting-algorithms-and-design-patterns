@@ -18,5 +18,5 @@ public:
     /// <summary>
     /// Вызывается субъектом при изменении уровня
     /// </summary>
-    void update(const std::string& event, int value) override;
+    void update(const std::string& event, int value) override final;
 };

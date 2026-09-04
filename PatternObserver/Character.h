@@ -21,17 +21,17 @@ public:
     /// <summary>
     /// Подписать наблюдателя
     /// </summary>
-    void attach(std::shared_ptr<IObserver> observer) override;
+    void attach(std::shared_ptr<IObserver> observer) override final;
 
     /// <summary>
     /// Отписать наблюдателя
     /// </summary>
-    void detach(std::shared_ptr<IObserver> observer) override;
+    void detach(std::shared_ptr<IObserver> observer) override final;
 
     /// <summary>
     /// Уведомить всех подписанных наблюдателей
     /// </summary>
-    void notify(const std::string& event, int value) override;
+    void notify(const std::string& event, int value) override final;
 
     /// <summary>
     /// Выводит состояние в консоль

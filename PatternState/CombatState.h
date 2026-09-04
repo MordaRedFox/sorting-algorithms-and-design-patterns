@@ -25,5 +25,5 @@ public:
     /// <summary>
     /// Возвращает строковое название состояния
     /// </summary>
-    std::string getName() const override;
+    std::string getName() const override final;
 };

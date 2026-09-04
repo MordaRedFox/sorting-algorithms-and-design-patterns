@@ -20,10 +20,10 @@ public:
     /// Основной метод, вызываемый контекстом для выполнения действия,
     /// характерного для текущего состояния
     /// </summary>
-    void handle(class StateContext& context) override;
+    void handle(class StateContext& context) override final;
 
     /// <summary>
     /// Возвращает строковое название состояния
     /// </summary>
-    std::string getName() const override;
+    std::string getName() const override final;
 };
